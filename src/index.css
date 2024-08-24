@@ -1,0 +1,110 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../assets/fonts/SFPRODISPLAYREGULAR.OTF") format("opentype");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../assets/fonts/SFPRODISPLAYBOLD.OTF") format("opentype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../assets/fonts/SFPRODISPLAYLIGHT.OTF") format("opentype");
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: "SF Pro Display";
+  src: url("../assets/fonts/SFPRODISPLAYSEMIBOLDITALIC.OTF") format("opentype");
+  font-weight: 600;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  width: 100dvw;
+  overflow-x: hidden;
+  height: 100%;
+  background: #000;
+  user-select: none;
+}
+
+main {
+  overflow: hidden;
+  transition: filter 0.5s;
+}
+
+.blurFltr {
+  filter: blur(15px);
+}
+
+.height-transition {
+  transition-duration: 0.7s;
+}
+
+.screen-max-width {
+  margin-inline-start: auto;
+  margin-inline-end: auto;
+  position: relative;
+  max-width: 1140px;
+}
+
+.active {
+  color: #2170d6;
+}
+
+.search-bar {
+  scrollbar-width: none;
+}
+
+.contacts-list::-webkit-scrollbar,
+.recents-list::-webkit-scrollbar {
+  display: none;
+}
+
+.contacts-list,
+.recents-list {
+  scrollbar-width: none;
+}
+
+.bg-calling-screen {
+  background: linear-gradient(#6a6b6e, #373942);
+}
+
+.alphabet-line-height {
+  line-height: 1.2;
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center;
+  }
+
+  .section-heading {
+    @apply mb-5 text-3xl font-medium text-gray md:text-5xl lg:mb-0 lg:text-6xl;
+  }
+
+  .common-padding {
+    @apply px-5 py-20 sm:px-10 sm:py-32;
+  }
+
+  .video-carousel_container {
+    @apply relative sm:w-[70vw] w-[100vw] md:h-[70vh] sm:h-[50vh] h-[55vh];
+  }
+
+  .control-btn {
+    @apply ml-4 p-4 rounded-full bg-gray-300 backdrop-blur flex-center;
+  }
+}
